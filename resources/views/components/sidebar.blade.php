@@ -27,9 +27,25 @@
                 <li class="sidebar-item {{ Request::is('user') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('user.index') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-user-circle"></i>
+                            <i class="ti ti-user-plus"></i>
                         </span>
                         <span class="hide-menu">User</span>
+                    </a>
+                </li>
+                <li class="sidebar-item {{ Request::is('category') ? 'active' : '' }}">
+                    <a class="sidebar-link" href="{{ route('category.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-layout-kanban"></i>
+                        </span>
+                        <span class="hide-menu">Category</span>
+                    </a>
+                </li>
+                <li class="sidebar-item {{ Request::is('product') ? 'active' : '' }}">
+                    <a class="sidebar-link" href="{{ route('product.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-shopping-cart"></i>
+                        </span>
+                        <span class="hide-menu">Product</span>
                     </a>
                 </li>
             </ul>
