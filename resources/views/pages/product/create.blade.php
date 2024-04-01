@@ -51,12 +51,12 @@
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="description"
-                            name="description" placeholder="Description" value="{{ old('description') }}" required>
+                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" placeholder="Description" rows="4" required>{{ old('description') }}</textarea>
                         @error('description')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+
 
                     <div class="mb-3">
                         <label for="stock" class="form-label">Stock</label>
