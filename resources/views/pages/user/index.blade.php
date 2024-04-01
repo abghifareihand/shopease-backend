@@ -17,7 +17,7 @@
         @include('components.card-header', [
             'title' => 'All User',
             'breadcrumbs' => [
-                ['text' => 'Home', 'link' => route('home.index'), 'active' => false],
+                ['text' => 'Home', 'link' => route('dashboard.index'), 'active' => false],
                 ['text' => 'User', 'link' => '#', 'active' => true],
             ],
         ])

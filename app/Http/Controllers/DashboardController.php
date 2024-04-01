@@ -21,7 +21,7 @@ class DashboardController extends Controller
         // Jumlah user dengan rola 'USER'
         $totalUser = User::where('roles', 'USER')->count();
 
-        return view('pages.home.dashboard', compact('totalAllUser', 'totalAdmin', 'totalUser'));
+        return view('pages.dashboard', compact('totalAllUser', 'totalAdmin', 'totalUser'));
     }
 
     /**

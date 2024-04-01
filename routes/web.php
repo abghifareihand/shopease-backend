@@ -24,6 +24,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('profile', function () {
         return view('pages.profile');
     })->name('profile');
-    Route::resource('home', DashboardController::class);
+    Route::resource('dashboard', DashboardController::class);
     Route::resource('user', UserController::class);
 });
