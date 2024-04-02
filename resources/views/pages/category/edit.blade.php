@@ -25,7 +25,7 @@
 
             {{-- Form --}}
             <div class="card-body">
-                <form action="{{ route('category.update', $category) }}" method="POST">
+                <form action="{{ route('category.update', $category) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">

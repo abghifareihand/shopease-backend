@@ -41,6 +41,9 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $fileName = time() . '.' . $request->image->extension();
+        $path = $request->file('image')->storeAs('products', $fileName, 'public');
+        $data['image'] = 'storage/' . $path;
         Product::create($data);
         return redirect()->route('product.index')->with('success', 'Product created successfully.');
     }
@@ -68,11 +71,21 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $data = $request->all();
+
+
         $product = Product::findOrFail($id);
-        $name = $product->name;
-        $product->update($data);
-        return redirect()->route('product.index')->with('success', $name . ' updated successfully.');
+        $data = $request->all();
+
+        // Jika ada file gambar yang diunggah, simpan gambar baru
+        if ($request->file('image')) {
+            $fileName = time() . '.' . $request->image->extension();
+            $path = $request->file('image')->storeAs('products', $fileName, 'public');
+            $data['image'] = 'storage/' . $path;
+        }
+
+        $product->update($data); // Memperbarui data produk
+
+        return redirect()->route('product.index')->with('success', 'Product updated successfully.');
     }
 
     /**

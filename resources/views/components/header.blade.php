@@ -125,13 +125,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
-                            class="rounded-circle">
+                        <img src="{{ asset('assets/images/profile/user-1.jpg') }}" alt="" width="35"
+                            height="35" class="rounded-circle">
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                         <div class="d-flex align-items-center py-6 mx-7">
-                            <img src="../assets/images/profile/user-1.jpg" class="rounded-circle" width="80"
-                                height="80" alt="" />
+                            <img src="{{ asset('assets/images/profile/user-1.jpg') }}" class="rounded-circle"
+                                width="80" height="80" alt="" />
                             <div class="ms-3">
                                 <h5 class="mb-1 fs-3">Hi, {{ auth()->user()->name }}</h5>
                                 <p class="mb-0 d-flex align-items-center gap-2">
@@ -140,12 +140,11 @@
                             </div>
                         </div>
                         <div class="message-body">
-                            <a href="{{ route('profile') }}"
-                                class="d-flex align-items-center gap-2 dropdown-item">
+                            <a href="{{ route('profile') }}" class="d-flex align-items-center gap-2 dropdown-item">
                                 <span
                                     class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
-                                    <img src="../assets/images/icons/icon-account.svg" alt="" width="24"
-                                        height="24" />
+                                    <img src="{{ asset('assets/images/icons/icon-account.svg') }}" alt=""
+                                        width="24" height="24" />
                                 </span>
                                 <div class="w-75 d-inline-block v-middle ps-3">
                                     <h6 class="mb-1 fs-3 fw-semibold lh-base">My Profile</h6>
@@ -155,8 +154,8 @@
                             <a href="#" class="d-flex align-items-center gap-2 dropdown-item">
                                 <span
                                     class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
-                                    <img src="../assets/images/icons/icon-inbox.svg" alt="" width="24"
-                                        height="24" />
+                                    <img src="{{ asset('assets/images/icons/icon-inbox.svg') }}" alt=""
+                                        width="24" height="24" />
                                 </span>
                                 <div class="w-75 d-inline-block v-middle ps-3">
                                     <h6 class="mb-1 fs-3 fw-semibold lh-base">My Inbox</h6>
@@ -166,8 +165,8 @@
                             <a href="#" class="d-flex align-items-center gap-2 dropdown-item">
                                 <span
                                     class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
-                                    <img src="../assets/images/icons/icon-tasks.svg" alt="" width="24"
-                                        height="24" />
+                                    <img src="{{ asset('assets/images/icons/icon-tasks.svg') }}" alt=""
+                                        width="24" height="24" />
                                 </span>
                                 <div class="w-75 d-inline-block v-middle ps-3">
                                     <h6 class="mb-1 fs-3 fw-semibold lh-base">My Task</h6>

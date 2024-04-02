@@ -25,7 +25,7 @@
 
             {{-- Form --}}
             <div class="card-body">
-                <form action="" method="POST">
+                <form action="{{ route('user.update', $user) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="row">
@@ -62,26 +62,16 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control @error('password') is-invalid @enderror"
-                                id="password" name="password" placeholder="Password" required>
+                                id="password" name="password" placeholder="Password">
                             @error('password')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="password_confirmation" class="form-label">Password Confirmation</label>
-                            <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror"
-                                id="password_confirmation" name="password_confirmation" placeholder="Password Confirmation"
-                                required>
-                            @error('password_confirmation')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-
-                    </div>
+                    </div> --}}
 
                     <button type="submit" class="btn btn-primary rounded px-4 mt-2">Submit</button>
                 </form>

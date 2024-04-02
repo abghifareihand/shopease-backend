@@ -41,8 +41,7 @@
                 <table class="table align-middle text-nowrap mb-0">
                     <thead class="text-dark fs-4">
                         <tr class="fw-semibold">
-                            <th>ID</th>
-                            <th>Name</th>
+                            <th>Category Name</th>
                             <th>Created</th>
                             <th></th>
                         </tr>
@@ -51,10 +50,16 @@
                         @foreach ($categories as $category)
                             <tr>
                                 <td>
-                                    <p class="mb-0 fs-3">{{ $category->id }}</p>
-                                </td>
-                                <td>
-                                    <p class="mb-0 fs-3">{{ $category->name }}</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-2 pe-1">
+                                            <img src="{{ asset($category->image) }}"
+                                                class="rounded-2" width="80" height="80" alt="" />
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-semibold mb-1">{{ $category->name }}</h6>
+
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>
                                     <p class="mb-0 fs-3">{{ $category->created_at }}</p>

@@ -32,6 +32,11 @@
                         <span class="hide-menu">User</span>
                     </a>
                 </li>
+
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span class="hide-menu">Product</span>
+                </li>
                 <li class="sidebar-item {{ Request::is('category') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('category.index') }}" aria-expanded="false">
                         <span>
@@ -47,6 +52,11 @@
                         </span>
                         <span class="hide-menu">Product</span>
                     </a>
+                </li>
+
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span class="hide-menu">Transaction</span>
                 </li>
             </ul>
         </nav>

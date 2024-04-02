@@ -25,7 +25,7 @@
 
             {{-- Form --}}
             <div class="card-body">
-                <form action="{{ route('product.update', $product) }}" method="POST">
+                <form action="{{ route('product.update', $product) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
@@ -50,7 +50,8 @@
 
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" placeholder="Description" rows="4" required>{{ $product->description }}</textarea>
+                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"
+                            placeholder="Description" rows="4" required>{{ $product->description }}</textarea>
                         @error('description')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -84,6 +85,16 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image Preview</label>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="col-sm-12 col-md-7">
+                                <img src="{{ asset($product->image) }}" class="rounded-2" width="200" height="200"
+                                    alt="Image Preview">
+                            </div>
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-primary rounded px-4 mt-2">Submit</button>
                 </form>
 
@@ -96,17 +107,4 @@
     <!-- JS Libraies -->
 
     <!-- Page Specific JS File -->
-    <script>
-        // Format input price to currency
-        // $('#price').on('input', function() {
-        //     // Remove non-numeric characters from input
-        //     var sanitized = $(this).val().replace(/[^0-9]/g, '');
-
-        //     // Format to currency
-        //     var formatted = sanitized.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-        //     // Update input value
-        //     $(this).val(formatted);
-        // });
-    </script>
 @endpush

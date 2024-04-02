@@ -52,7 +52,7 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="me-2 pe-1">
-                                            <img src="{{ asset('assets/images/products/product-1.jpg') }}"
+                                            <img src="{{ asset($product->image) }}"
                                                 class="rounded-2" width="48" height="48" alt="" />
                                         </div>
                                         <div>

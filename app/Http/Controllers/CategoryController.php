@@ -30,6 +30,9 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $fileName = time() . '.' . $request->image->extension();
+        $path = $request->file('image')->storeAs('categories', $fileName, 'public');
+        $data['image'] = 'storage/' . $path;
         Category::create($data);
         return redirect()->route('category.index')->with('success', 'Category created successfully.');
     }
@@ -56,11 +59,17 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $data = $request->all();
         $category = Category::findOrFail($id);
-        $name = $category->name;
+        $data = $request->all();
+
+        // Jika ada file gambar yang diunggah, simpan gambar baru
+        if ($request->file('image')) {
+            $fileName = time() . '.' . $request->image->extension();
+            $path = $request->file('image')->storeAs('categories', $fileName, 'public');
+            $data['image'] = 'storage/' . $path;
+        }
         $category->update($data);
-        return redirect()->route('category.index')->with('success', $name . ' updated successfully.');
+        return redirect()->route('category.index')->with('success', 'Category updated successfully.');
     }
 
     /**

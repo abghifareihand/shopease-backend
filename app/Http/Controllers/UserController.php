@@ -31,19 +31,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:100',
-            'email' => 'required|string|email|max:255|unique:users',
-            'phone' => 'nullable|string|max:20',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
-
         $data = $request->all();
         $data['password'] = Hash::make($data['password']);
         User::create($data);
@@ -72,7 +59,17 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $data = $request->all();
+        //check if password is not empty
+        if ($request->input('password')) {
+            $data['password'] = Hash::make($request->input('password'));
+        } else {
+            //if password is empty, then use the old password
+            $data['password'] = $user->password;
+        }
+        $user->update($data);
+        return redirect()->route('user.index')->with('success', 'User updated successfully.');
     }
 
     /**
