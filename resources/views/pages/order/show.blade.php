@@ -32,10 +32,10 @@
                 </form>
                 @if ($order->status == 'pending')
                     <button
-                        class="btn bg-danger-subtle text-danger d-flex align-items-center">{{ strtoupper($order->status) }}</button>
+                    class="btn bg-danger-subtle text-danger d-flex align-items-center">{{ strtoupper($order->status) }}</button>
                 @else
                     <button
-                        class="btn bg-success-subtle text-success d-flex align-items-center">{{ strtoupper($order->status) }}</button>
+                    class="btn bg-success-subtle text-success d-flex align-items-center">{{ strtoupper($order->status) }}</button>
                 @endif
             </div>
 
