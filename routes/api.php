@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AddressController;
 use App\Http\Controllers\Api\CallbackController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,9 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // order
     Route::post('order', [OrderController::class, 'order']);
+
+    // address
+    Route::apiResource('address', AddressController::class);
 });
 
 // register

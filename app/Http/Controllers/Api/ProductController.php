@@ -17,12 +17,12 @@ class ProductController extends Controller
         // Get all Product and Get Product by Category id
         $products = Product::when($request->category_id, function ($query) use ($request) {
             return $query->where('category_id', $request->category_id);
-        })->get();
+        })->paginate(10);
         return response()->json([
             'code' => 200,
             'success' => true,
             'message' => 'Get products success',
-            'data' => ProductResource::collection($products)
+            'data' => $products
         ]);
     }
 

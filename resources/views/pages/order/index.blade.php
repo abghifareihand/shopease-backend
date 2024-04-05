@@ -65,7 +65,7 @@
                                             class="badge fw-semibold py-1 w-50 bg-success-subtle text-success">{{ strtoupper($order->status) }}</span>
                                     @elseif ($order->status == 'pending')
                                         <span
-                                            class="badge fw-semibold py-1 w-50 bg-warning-subtle text-warning">{{ strtoupper($order->status) }}</span>
+                                            class="badge fw-semibold py-1 bg-warning-subtle text-warning">{{ strtoupper($order->status) }}</span>
                                     @elseif ($order->status == 'expired')
                                         <span
                                             class="badge fw-semibold py-1 bg-danger-subtle text-danger">{{ strtoupper($order->status) }}</span>

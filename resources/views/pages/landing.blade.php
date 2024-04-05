@@ -5,221 +5,351 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Landing Page</title>
-
-    <!-- General CSS Files -->
-    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/logo.png') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="{{ asset('assets/libs/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('assets/css/landing.css') }}" />
 </head>
 
-<body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-            <div class="container px-5">
-                <a class="navbar-brand" href="index.html">
-                    <img src="{{ asset('assets/images/logos/shopease.svg') }}" alt="" width="200">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav align-items-center mb-2 mb-lg-0 ms-auto fs-4">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Project</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Support</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Contact</a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a href="{{ route('login') }}"
-                                class="btn btn-primary fs-3 rounded btn-hover-shadow px-4 py-2">Login</a>
-                        </li>
-                    </ul>
-                </div>
+<body>
+    <nav class="mb-70 navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('assets/images/logos/shopease.svg') }}" height="40" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <!-- Header-->
-        <header class="py-5">
-            <div class="container px-5 pb-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-xxl-5">
-                        <!-- Header text content-->
-                        <div class="text-center text-xxl-start">
-                            <h6 class="d-flex align-items-center gap-2 fs-4 fw-semibold mb-3 aos-init aos-animate">
-                                <i class="ti ti-rocket text-secondary fs-6"></i>
-                                Kick start your project with
-                            </h6>
-                            <h1 class="fw-bolder mb-5">
-                                Most powerful &
-                                <span class="text-primary"> Developer friendly</span>
-                                dashboard
-                            </h1>
-                            <div
-                                class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                                    href="#">Resume</a>
-                                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                                    href="#">Projects</a>
-                            </div>
+        </div>
+    </nav>
+    <section class="header mb-70">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="jumbo-header mb-30">
+                        Cari Produk Cepat<br>
+                        Nyaman & Murmer
+                    </h1>
+                    <p class="paragraph mb-30">
+                        Lorem house ipsum could be a reall good home<br>
+                        without thinking si amet dolor safety around.
+                    </p>
+                    <p class="mb-50"><a href="#" class="btn btn-primary">Explore Houses</a></p>
+                    <div class="row stats text-center">
+                        <div class="col-lg-4 item">
+                            <h3 class="big-header">
+                                23,491
+                            </h3>
+                            <p class="paragraph">
+                                Koskosan
+                            </p>
+                        </div>
+                        <div class="col-lg-4 item">
+                            <h3 class="big-header">
+                                983
+                            </h3>
+                            <p class="paragraph">
+                                Awards
+                            </p>
+                        </div>
+                        <div class="col-lg-4 item">
+                            <h3 class="big-header">
+                                182M+
+                            </h3>
+                            <p class="paragraph">
+                                Happy People
+                            </p>
                         </div>
                     </div>
-                    <div class="col-xxl-7">
-                        <!-- Header profile picture-->
-                        <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                            <div class="profile bg-gradient-primary-to-secondary">
-                                <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
-                                <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                                <img class="profile-img" src="{{ asset('assets/images/products/profile.png') }} "alt="profile" />
-                                <div class="dots-1">
-                                    <!-- SVG Dots-->
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                        </g>
-                                    </svg>
-                                    <!-- END of SVG dots-->
+                </div>
+                <div class="col-lg-6">
+                    <img src="{{ asset('assets/images/landing/banner.png') }}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="best-items">
+        <div class="container">
+            <div class="row text-center mb-50">
+                <div class="col-lg-12">
+                    <img src="images/ic_best.svg" height="42" alt="" class="mb-16">
+                    <h3 class="big-header">
+                        Best of The Best
+                    </h3>
+                    <p class="paragraph">
+                        Dolor space comfortable moments
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/iphone1.jpg') }}" alt="" class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row rounded">
+
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
                                 </div>
-                                <div class="dots-2">
-                                    <!-- SVG Dots-->
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                        </g>
-                                    </svg>
-                                    <!-- END of SVG dots-->
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
                                 </div>
-                                <div class="dots-3">
-                                    <!-- SVG Dots-->
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                        </g>
-                                    </svg>
-                                    <!-- END of SVG dots-->
-                                </div>
-                                <div class="dots-4">
-                                    <!-- SVG Dots-->
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
-                                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                            <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                            <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                            <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
-                                            <path d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"></path>
-                                            <path d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"></path>
-                                            <path d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"></path>
-                                            <path d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"></path>
-                                            <path d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"></path>
-                                            <path d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"></path>
-                                            <path d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"></path>
-                                            <path d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"></path>
-                                            <path d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"></path>
-                                            <path d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"></path>
-                                            <path d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"></path>
-                                            <path d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"></path>
-                                            <path d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"></path>
-                                            <path d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"></path>
-                                            <path d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"></path>
-                                            <path d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"></path>
-                                            <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"></path>
-                                        </g>
-                                    </svg>
-                                    <!-- END of SVG dots-->
-                                </div>
+                                <div class="clear"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <!-- About Section-->
-        <section class="bg-light py-5">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-xxl-8">
-                        <div class="text-center my-5">
-                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-                            <p class="lead fw-light mb-4">My name is Start Bootstrap and I help brands grow.</p>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-                                dolorum itaque qui unde quisquam consequatur autem. Eveniet quasi nobis aliquid cumque
-                                officiis sed rem iure ipsa! Praesentium ratione atque dolorem?</p>
-                            <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
-                                <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
-                                <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/mac1.jpg') }}" alt=""
+                                class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row ">
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
+                                </div>
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/key1.jpg') }}" alt=""
+                                class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row ">
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
+                                </div>
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/monitor1.jpg') }}" alt=""
+                                class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row ">
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
+                                </div>
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/house5.png') }}" alt=""
+                                class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row ">
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
+                                </div>
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/house6.png') }}" alt=""
+                                class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row ">
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
+                                </div>
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/house7.png') }}" alt=""
+                                class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row ">
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
+                                </div>
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="item">
+                        <a href="">
+                            <img src="{{ asset('assets/images/landing/house8.png') }}" alt=""
+                                class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <a href="">
+                                <h3 class="small-header mb-2">
+                                    Coral Brown
+                                </h3>
+                            </a>
+                            <div class="footer">
+                                <div class="location d-flex flex-row ">
+                                    <img src="{{ asset('assets/images/landing/ic_loc.svg') }}" height="20"
+                                        alt="">
+                                    <p class="small-paragraph mb-0">
+                                        Exnoparty
+                                    </p>
+                                </div>
+                                <div class="price">
+                                    <p class="mb-0">
+                                        $28,109<span class="extra-small-paragraph">/mo</span>
+                                    </p>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <!-- Bootstrap core JS-->
+        </div>
+    </section>
     <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
